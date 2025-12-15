@@ -8,28 +8,31 @@ const projectData = [
     title: "PDF Tools Suite",
     tech: ["Laravel", "Blade", "Tailwind"],
     description:
-      "A comprehensive web app for PDF processing (merge, split, convert).",
+      "Developed a production-ready PDF processing web application supporting merge, split, and conversion features with secure backend logic and optimized file handling.",
     link: "https://pdf.toolscase.com/",
   },
   {
     id: 2,
     title: "ToolsCase Platform",
     tech: ["Laravel", "Blade", "Tailwind"],
-    description: "A modular multi-tool web platform with route grouping.",
+    description:
+      "Built a modular multi-tool platform using Laravel route grouping and reusable Blade components for scalability and maintainability.",
     link: "https://toolscase.com/",
   },
   {
     id: 3,
     title: "SameDay Delivery",
     tech: ["JavaScript", "CSS", "Figma"],
-    description: "Responsive multi-page delivery site converted from Figma.",
+    description:
+      "Converted Figma UI designs into a fully responsive multi-page website with clean HTML, CSS, and JavaScript.",
     link: "",
   },
   {
     id: 4,
     title: "Hospital Management",
     tech: ["MERN Stack", "MongoDB", "Express"],
-    description: "Full-stack app for patient records.",
+    description:
+      "Implemented a MERN stack application for managing patient records, appointments, and role-based access.",
     link: "",
   },
 ];
