@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const projectData = [
   {
@@ -7,43 +9,54 @@ const projectData = [
     tech: ["Laravel", "Blade", "Tailwind"],
     description:
       "A comprehensive web app for PDF processing (merge, split, convert).",
-    link: "https://pdf.toolscase.com/", // Real Link
+    link: "https://pdf.toolscase.com/",
   },
   {
     id: 2,
     title: "ToolsCase Platform",
     tech: ["Laravel", "Blade", "Tailwind"],
     description: "A modular multi-tool web platform with route grouping.",
-    link: "https://toolscase.com/", // Real Link
+    link: "https://toolscase.com/",
   },
   {
     id: 3,
     title: "SameDay Delivery",
     tech: ["JavaScript", "CSS", "Figma"],
     description: "Responsive multi-page delivery site converted from Figma.",
-    link: "", // EMPTY STRING = No Button will show
+    link: "",
   },
   {
     id: 4,
     title: "Hospital Management",
     tech: ["MERN Stack", "MongoDB", "Express"],
     description: "Full-stack app for patient records.",
-    link: "", // EMPTY STRING = No Button will show
+    link: "",
   },
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-slate-800 text-white px-6">
-      <h2 className="text-4xl font-bold text-center mb-12">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold text-center mb-12"
+      >
         Featured Projects
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {projectData.map((project) => (
-          <div
+        {projectData.map((project, index) => (
+          <motion.div
             key={project.id}
-            className="bg-slate-700 p-6 rounded-xl hover:shadow-2xl hover:bg-slate-600 transition flex flex-col h-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }} // Stagger effect!
+            whileHover={{ y: -10 }} // Lifts up when you hover!
+            className="bg-slate-700 p-6 rounded-xl hover:shadow-2xl hover:shadow-blue-500/20 transition flex flex-col h-full border border-transparent hover:border-blue-500/30"
           >
             <h3 className="text-2xl font-bold mb-2 text-blue-400">
               {project.title}
@@ -64,18 +77,14 @@ const Projects = () => {
               {project.description}
             </p>
 
-            {/* LOGIC: Only show button if project.link is NOT empty */}
             {project.link ? (
               <a
                 href={project.link}
-                target="_blank" // Opens in new tab
-                rel="noopener noreferrer" // Security
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-400 font-semibold hover:text-white transition mt-auto self-start inline-flex items-center gap-1"
               >
-                {/* Change text based on link type */}
-                {project.link.includes("github")
-                  ? "View Code"
-                  : "Visit Site"}{" "}
+                {project.link.includes("github") ? "View Code" : "Visit Site"}{" "}
                 &rarr;
               </a>
             ) : (
@@ -83,7 +92,7 @@ const Projects = () => {
                 (Internal / Private Project)
               </span>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
