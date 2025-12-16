@@ -40,6 +40,9 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  icons: {
+    icon: "/icon1.png", // Ensure you have icon.png in your 'public' folder
+  },
 };
 
 export default function RootLayout({ children }) {
