@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const projectData = [
   {
     id: 1,
-    title: "PDF Tools Suite",
+    title: "PDF ToolsCase",
     tech: ["Laravel", "Blade", "Tailwind"],
     description:
-      "Developed a production-ready PDF processing web application supporting merge, split, and conversion features with secure backend logic and optimized file handling.",
+      "Developed a production-ready PDF processing web application supporting merge, compress, split, and conversion features with secure backend logic and optimized file handling.",
     link: "https://pdf.toolscase.com/",
   },
   {
@@ -22,7 +22,7 @@ const projectData = [
   {
     id: 3,
     title: "SameDay Delivery",
-    tech: ["JavaScript", "CSS", "Figma"],
+    tech: ["HTML", "CSS", "JavaScript", "Figma"],
     description:
       "Converted Figma UI designs into a fully responsive multi-page website with clean HTML, CSS, and JavaScript.",
     link: "",
