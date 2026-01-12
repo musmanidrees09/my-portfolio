@@ -52,7 +52,7 @@ const Contact = () => {
 
         {/* RESUME BUTTON */}
         <a
-          href="/Muhammad_Usman_CV.pdf"
+          href="/Muhammad-Usman-CV.pdf"
           download
           className="inline-block bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-3 rounded-full font-semibold shadow-lg shadow-blue-500/30"
         >
