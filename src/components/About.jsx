@@ -42,14 +42,35 @@ const About = () => {
           </h3>
 
           <p className="text-gray-300 mb-4 leading-relaxed">
-            I am a Computer Science graduate and a{" "}
-            <span className="font-semibold">Junior Web Developer</span> with
-            hands-on experience building scalable applications. I specialize in
-            the{" "}
+            I am a{" "}
             <span className="text-white font-semibold">
-              MERN stack (React, Node, MongoDB)
+              Laravel-focused Web Developer
             </span>{" "}
-            and <span className="text-white font-semibold">PHP/Laravel</span>.
+            with production experience architecting secure SaaS applications.
+            Currently at
+            <span className="font-semibold"> Devonsite</span>, I build systems
+            serving
+            <span className="text-white font-semibold">
+              {" "}
+              200+ daily users
+            </span>{" "}
+            and have successfully optimized database performance to reduce
+            server response times by
+            <span className="text-white font-semibold"> 40%</span>.
+          </p>
+
+          <p className="text-gray-300 mb-4 leading-relaxed">
+            My expertise lies in{" "}
+            <span className="text-white font-semibold">
+              PHP, Laravel, and MySQL
+            </span>
+            , where I engineer scalable solutions—recently achieving{" "}
+            <span className="text-white font-semibold">
+              95+ Google Lighthouse scores
+            </span>
+            . While my fortress is the backend, I am equally proficient in the{" "}
+            <span className="text-white font-semibold">MERN stack</span> and
+            modern frontend architectures.
           </p>
 
           <p className="text-gray-300 mb-6 leading-relaxed">
