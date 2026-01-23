@@ -23,9 +23,7 @@ const Experience = () => {
           <div className="bg-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition shadow-lg">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
               <div>
-                <h3 className="text-2xl font-bold text-white">
-                  Junior Web Developer
-                </h3>
+                <h3 className="text-2xl font-bold text-white">Web Developer</h3>
                 <p className="text-blue-400 font-medium">
                   Devonsite • Lahore, Pakistan
                 </p>
@@ -37,17 +35,29 @@ const Experience = () => {
 
             <ul className="list-disc list-inside text-gray-300 space-y-2">
               <li>
-                Promoted from Intern to Junior Developer due to strong backend
-                performance.
+                Architected and deployed 3 production Laravel applications,
+                implementing secure file processing workflows with encrypted
+                storage and automated cleanup.
               </li>
               {/* CHANGED: Removed React/Next.js, added Laravel/Blade focus */}
               <li>
-                Developing dynamic web applications using{" "}
-                <strong>Laravel, PHP, and Blade templates</strong>.
+                Designed MySQL databases with proper indexing and normalized
+                schemas; optimized multiple slow queries reducing response times
+                by ~40% on large datasets.
               </li>
               <li>
-                Engineered secure RESTful APIs and optimized SQL database
-                queries for faster load times.
+                Applied MVC architecture with service layers for scalability,
+                successfully debugging production issues and collaborating on
+                client deliverables ahead of schedule.
+              </li>
+              <li>
+                Implemented secure authentication and role-based access control
+                for multi-tenant applications, maintaining a strict security
+                record.
+              </li>
+              <li>
+                Collaborated effectively with a 4-person development team using
+                Git and Bitbucket workflows, conducting regular code reviews.
               </li>
             </ul>
           </div>

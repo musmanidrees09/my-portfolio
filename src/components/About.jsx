@@ -43,9 +43,9 @@ const About = () => {
 
           <p className="text-gray-300 mb-4 leading-relaxed">
             I am a Computer Science graduate and a{" "}
-            <span className="font-semibold">Junior Web Developer</span>
-            with hands-on experience building scalable applications. I
-            specialize in the{" "}
+            <span className="font-semibold">Junior Web Developer</span> with
+            hands-on experience building scalable applications. I specialize in
+            the{" "}
             <span className="text-white font-semibold">
               MERN stack (React, Node, MongoDB)
             </span>{" "}
