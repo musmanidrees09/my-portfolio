@@ -36,7 +36,7 @@ const Contact = () => {
 
           {/* LINKEDIN */}
           <motion.a
-            href="https://www.linkedin.com/in/muhammad-usman-16a15b262/"
+            href="https://www.linkedin.com/in/muhammad-usman09-idrees/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -5 }}
@@ -52,7 +52,7 @@ const Contact = () => {
 
         {/* RESUME BUTTON */}
         <a
-          href="/Muhammad-Usman-CV.pdf"
+          href="/Muhammad_Usman_Web_Developer_CV.pdf"
           download
           className="inline-block bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-3 rounded-full font-semibold shadow-lg shadow-blue-500/30"
         >

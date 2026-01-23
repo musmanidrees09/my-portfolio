@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex justify-center gap-8 mb-4">
         {/* LINKEDIN */}
         <a
-          href="https://www.linkedin.com/in/muhammad-usman-16a15b262/" // <--- PASTE LINK HERE
+          href="https://www.linkedin.com/in/muhammad-usman09-idrees/" // <--- PASTE LINK HERE
           target="_blank" // Opens in new tab
           rel="noopener noreferrer" // Security best practice
           className="hover:text-blue-500 transition font-semibold"
