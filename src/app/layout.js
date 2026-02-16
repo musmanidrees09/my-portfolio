@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://m-usman-idrees.vercel.app'),
   title: "Muhammad Usman | Full-Stack Developer",
   description:
     "Junior Full-Stack Developer specializing in Laravel and MERN stack. Building scalable, production-ready web applications.",
@@ -41,7 +42,7 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/icon1.png", // Ensure you have icon.png in your 'public' folder
+    icon: "/icon1.png",
   },
 };
 

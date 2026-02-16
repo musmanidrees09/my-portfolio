@@ -6,90 +6,86 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-slate-900 text-white px-6 border-b border-slate-800"
+      className="py-24 bg-[#0b1120] text-white px-6 relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* LEFT SIDE: Image Placeholder */}
+      <div className="absolute top-0 right-0 w-[30%] h-[30%] bg-blue-600/10 blur-[100px] rounded-full"></div>
+      
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+        {/* LEFT SIDE: Image/Icon Placeholder */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="relative"
         >
-          <div className="w-full h-80 bg-gradient-to-tr from-blue-600 to-slate-800 rounded-2xl shadow-2xl flex items-center justify-center border border-slate-700">
-            <span className="text-9xl opacity-20">👨‍💻</span>
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative w-full h-[400px] bg-[#0f172a] rounded-2xl overflow-hidden border border-white/10 flex items-center justify-center">
+              <div className="text-9xl opacity-10 grayscale group-hover:grayscale-0 transition-all duration-500">👨‍💻</div>
+              
+              {/* Technical Stack overlay */}
+              <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2">
+                {["Laravel", "React", "MySQL"].map((tag) => (
+                  <div key={tag} className="glass text-[10px] py-1 text-center rounded-md font-bold uppercase tracking-widest text-blue-400">
+                    {tag}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          {/* Floating Card - Updated to reflect JOB status */}
-          <div className="absolute -bottom-6 -right-6 bg-slate-800 p-4 rounded-xl border border-blue-500 shadow-xl">
-            <p className="text-blue-400 font-bold text-xl">Junior Developer</p>
-            <p className="text-gray-400 text-sm">Devonsite</p>
-          </div>
+          
+          {/* Floating Experience Card */}
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border border-blue-500/30 shadow-2xl"
+          >
+            <p className="text-3xl font-black text-white leading-none">1+</p>
+            <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mt-1">Year Pro Experience</p>
+          </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE: Updated Text */}
+        {/* RIGHT SIDE: Narrative */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.8 }}
         >
-          <h2 className="text-blue-500 font-bold tracking-widest uppercase mb-2">
-            About Me
+          <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+            <span className="text-blue-400 font-bold text-xs uppercase tracking-widest">
+              My Journey
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+            I build scalable <br />
+            <span className="text-gradient">digital ecosystems</span>
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Full Stack Developer
-          </h3>
 
-          <p className="text-gray-300 mb-4 leading-relaxed">
-            I am a{" "}
-            <span className="text-white font-semibold">
-              Laravel-focused Web Developer
-            </span>{" "}
-            with production experience architecting secure SaaS applications.
-            Currently at
-            <span className="font-semibold"> Devonsite</span>, I build systems
-            serving
-            <span className="text-white font-semibold">
-              {" "}
-              200+ daily users
-            </span>{" "}
-            and have successfully optimized database performance to reduce
-            server response times by
-            <span className="text-white font-semibold"> 40%</span>.
-          </p>
+          <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+            <p>
+              Hey there! I&apos;m <span className="text-white font-bold">Muhammad Usman</span>, a Full Stack Developer based in Lahore, Pakistan. I specialize in architecting secure, high-performance web applications using <span className="text-white border-b-2 border-blue-500/30">PHP/Laravel</span> and the <span className="text-white border-b-2 border-blue-500/30">MERN Stack</span>.
+            </p>
 
-          <p className="text-gray-300 mb-4 leading-relaxed">
-            My expertise lies in{" "}
-            <span className="text-white font-semibold">
-              PHP, Laravel, and MySQL
-            </span>
-            , where I engineer scalable solutions—recently achieving{" "}
-            <span className="text-white font-semibold">
-              95+ Google Lighthouse scores
-            </span>
-            . While my fortress is the backend, I am equally proficient in the{" "}
-            <span className="text-white font-semibold">MERN stack</span> and
-            modern frontend architectures.
-          </p>
+            <p>
+              In my current role at <span className="text-blue-400 font-bold">Devonsite</span>, I&apos;ve had the privilege of engineering systems that handle <span className="text-white">200+ daily users</span>. I Recently optimized database queries that slashed server response times by <span className="text-green-400 font-bold">40%</span>.
+            </p>
 
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Currently, I am working at{" "}
-            <span className="text-blue-400 font-bold">Devonsite</span>, where I
-            focus on integrating backend APIs and optimizing frontend
-            performance for real-world clients.
-          </p>
+            <p>
+              My philosophy is simple: write <span className="italic">clean</span>, <span className="italic">maintainable</span> code that delivers <span className="italic text-white">exceptional user experiences</span>. Whether it&apos;s complex backend logic or pixel-perfect frontends, I bring a detail-oriented approach to every project.
+            </p>
+          </div>
 
-          <div className="flex gap-4">
-            <div className="bg-slate-800 px-5 py-3 rounded-lg border border-slate-700">
-              <span className="block text-2xl font-bold text-blue-400">5+</span>
-              <span className="text-sm text-gray-400">Projects Completed</span>
+          <div className="mt-10 grid grid-cols-2 gap-4">
+            <div className="glass p-4 rounded-xl">
+              <span className="block text-2xl font-bold text-white">5+</span>
+              <span className="text-xs text-gray-500 uppercase tracking-widest">Completed Projects</span>
             </div>
-            <div className="bg-slate-800 px-5 py-3 rounded-lg border border-slate-700">
-              <span className="block text-2xl font-bold text-blue-400">
-                Pro
-              </span>
-              <span className="text-sm text-gray-400">Experience</span>
+            <div className="glass p-4 rounded-xl">
+              <span className="block text-2xl font-bold text-white">95+</span>
+              <span className="text-xs text-gray-500 uppercase tracking-widest">Lighthouse Score</span>
             </div>
           </div>
         </motion.div>

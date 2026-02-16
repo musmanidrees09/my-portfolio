@@ -2,33 +2,38 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-gray-400 py-8 text-center border-t border-slate-800">
-      <div className="flex justify-center gap-8 mb-4">
-        {/* LINKEDIN */}
-        <a
-          href="https://www.linkedin.com/in/muhammad-usman09-idrees/" // <--- PASTE LINK HERE
-          target="_blank" // Opens in new tab
-          rel="noopener noreferrer" // Security best practice
-          className="hover:text-blue-500 transition font-semibold"
-        >
-          LinkedIn
-        </a>
+    <footer className="bg-[#0b1120] text-gray-500 py-12 px-6 border-t border-white/5 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+        <div className="text-center md:text-left">
+          <span className="text-xl font-black tracking-tighter text-white">
+            M.<span className="text-blue-500">Usman</span>
+          </span>
+          <p className="text-xs uppercase tracking-widest font-bold mt-2">Full Stack Developer</p>
+        </div>
 
-        {/* GITHUB */}
-        <a
-          href="https://github.com/musmanidrees09" // <--- PASTE LINK HERE
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white transition font-semibold"
-        >
-          GitHub
-        </a>
+        <div className="flex gap-8 items-center">
+          <a
+            href="https://www.linkedin.com/in/muhammad-usman09-idrees/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-all font-bold text-xs uppercase tracking-widest"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/musmanidrees09"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-all font-bold text-xs uppercase tracking-widest"
+          >
+            GitHub
+          </a>
+        </div>
+
+        <p className="text-[10px] uppercase font-bold tracking-[0.2em]">
+          &copy; {new Date().getFullYear()} MUHAMMED USMAN. Crafted with passion.
+        </p>
       </div>
-
-      <p className="text-sm">
-        &copy; {new Date().getFullYear()} Muhammad Usman. Built with Next.js &
-        Tailwind.
-      </p>
     </footer>
   );
 };

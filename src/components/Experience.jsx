@@ -4,73 +4,98 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-slate-800 text-white px-6">
+    <section id="experience" className="py-24 bg-[#0b1120] text-white px-6 relative">
+      <div className="absolute bottom-0 left-0 w-[50%] h-[30%] bg-indigo-600/5 blur-[120px] rounded-full"></div>
+      
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto"
+        className="max-w-4xl mx-auto relative z-10"
       >
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Work <span className="text-blue-500">Experience</span>
-        </h2>
-
-        {/* Timeline Item 1: Devonsite (UPDATED FOR LARAVEL ROLE) */}
-        <div className="relative border-l-4 border-blue-500 ml-4 pl-8 pb-12">
-          <span className="absolute -left-3 top-0 bg-blue-500 w-6 h-6 rounded-full border-4 border-slate-800"></span>
-
-          <div className="bg-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition shadow-lg">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-              <div>
-                <h3 className="text-2xl font-bold text-white">Web Developer</h3>
-                <p className="text-blue-400 font-medium">
-                  Devonsite • Lahore, Pakistan
-                </p>
-              </div>
-              <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-semibold mt-2 md:mt-0 w-fit">
-                Jul '25 - Present
-              </span>
-            </div>
-
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>
-                Architected and deployed 3 production Laravel applications,
-                implementing secure file processing workflows with encrypted
-                storage and automated cleanup.
-              </li>
-              {/* CHANGED: Removed React/Next.js, added Laravel/Blade focus */}
-              <li>
-                Designed MySQL databases with proper indexing and normalized
-                schemas; optimized multiple slow queries reducing response times
-                by ~40% on large datasets.
-              </li>
-              <li>
-                Applied MVC architecture with service layers for scalability,
-                successfully debugging production issues and collaborating on
-                client deliverables ahead of schedule.
-              </li>
-              <li>
-                Implemented secure authentication and role-based access control
-                for multi-tenant applications, maintaining a strict security
-                record.
-              </li>
-              <li>
-                Collaborated effectively with a 4-person development team using
-                Git and Bitbucket workflows, conducting regular code reviews.
-              </li>
-            </ul>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-black mb-4">
+            Working <span className="text-blue-500">History</span>
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Timeline Item 2: Education */}
-        <div className="relative border-l-4 border-slate-600 ml-4 pl-8">
-          <span className="absolute -left-3 top-0 bg-slate-600 w-6 h-6 rounded-full border-4 border-slate-800"></span>
-          <div className="bg-slate-900 p-6 rounded-xl border border-slate-700 opacity-80">
-            <h3 className="text-xl font-bold">BS Computer Science</h3>
-            <p className="text-gray-400">NCBA&E • 3.64 CGPA</p>
-            <p className="text-sm text-gray-500 mt-1">2020 - 2024</p>
-          </div>
+        <div className="space-y-12">
+          {/* Timeline Item 1: Devonsite */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="relative pl-8 md:pl-0"
+          >
+            {/* Desktop Timeline Dot */}
+            <div className="hidden md:block absolute left-1/2 -ml-3 top-0 w-6 h-6 rounded-full bg-blue-600 border-4 border-[#0b1120] z-20 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+            
+            <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
+              <div className="md:text-right mb-4 md:mb-0">
+                <h3 className="text-2xl font-black text-white">Full Stack Web Developer</h3>
+                <p className="text-blue-400 font-bold">Devonsite • Lahore</p>
+                <span className="inline-block mt-2 px-3 py-1 bg-blue-600/10 text-blue-400 rounded-full text-xs font-bold uppercase tracking-tighter">
+                  Jul 2024 - Present
+                </span>
+              </div>
+              
+              <div className="glass p-6 rounded-2xl border border-white/5 shadow-2xl relative">
+                {/* Mobile Timeline Pipe */}
+                <div className="md:hidden absolute -left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-transparent"></div>
+                <div className="md:hidden absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-blue-600 border-2 border-[#0b1120]"></div>
+
+                <ul className="space-y-3 text-gray-400 text-sm leading-relaxed">
+                  <li className="flex gap-2">
+                    <span className="text-blue-500 font-bold">▹</span>
+                    <span>Architected 3 production <span className="text-white">Laravel</span> applications with secure encryption workflows.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-blue-500 font-bold">▹</span>
+                    <span>Optimized MySQL queries reducing response times by <span className="text-green-500">40%</span> for 200+ daily users.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-blue-500 font-bold">▹</span>
+                    <span>Implemented <span className="text-white">Role-Based Access Control (RBAC)</span> for complex multi-tenant SaaS environments.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-blue-500 font-bold">▹</span>
+                    <span>Collaborated within a 4-person Agile team ensuring 100% on-time client deliveries.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Timeline Item 2: Education */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="relative pl-8 md:pl-0"
+          >
+             <div className="hidden md:block absolute left-1/2 -ml-3 top-0 w-6 h-6 rounded-full bg-surface-brighter border-4 border-[#0b1120] z-20"></div>
+             
+             <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
+              <div className="hidden md:block">
+                <div className="glass p-6 rounded-2xl border border-white/5 opacity-80">
+                  <p className="text-gray-400 text-sm italic">Focus: Software Engineering, Database Systems, Web Security</p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-black text-white">BS Computer Science</h3>
+                <p className="text-gray-500 font-bold">NCBA&E • 3.64 CGPA</p>
+                <span className="inline-block mt-2 px-3 py-1 bg-white/5 text-gray-400 rounded-full text-xs font-bold uppercase tracking-tighter">
+                  2020 - 2024
+                </span>
+                
+                {/* Mobile Context */}
+                <div className="md:hidden mt-4 glass p-4 rounded-xl text-xs text-gray-500">
+                  Focus: Software Engineering, Database Systems, Web Security
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
