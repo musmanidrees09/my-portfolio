@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
         <p className="text-[10px] uppercase font-bold tracking-[0.2em]">
-          &copy; {new Date().getFullYear()} MUHAMMED USMAN. Crafted with passion.
+          &copy; {new Date().getFullYear()} Muhammad Usman. All Rights Reserved.
         </p>
       </div>
     </footer>

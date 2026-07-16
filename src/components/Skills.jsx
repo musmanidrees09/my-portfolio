@@ -3,18 +3,25 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = {
-  Frontend: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React.js",
+  "Web & Frameworks": [
+    "PHP",
+    "Laravel",
+    "Node.js",
+    "Express.js",
+    "React",
     "Next.js",
-    "Tailwind",
-    "Bootstrap",
+    "Vite",
   ],
-  Backend: ["PHP", "Laravel","Node.js", "Express.js", "REST API", "MVC Structure" ], // Added 'Blade' for your Laravel focus
-  Databases: ["SQL", "MongoDB", "MySQL"],
-  Tools: ["Git", "GitHub","Postman"], // Added 'Postman' as it's a Pro tool
+  "Frontend & Styling": [
+    "JavaScript (ES6+)",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Framer Motion",
+  ],
+  "Databases & APIs": ["MySQL", "MongoDB", "REST APIs", "MVC Architecture"],
+  "Development & Workflow": ["Git", "GitHub", "Postman", "Chrome MV3", "jsPDF"],
 };
 
 const Skills = () => {
@@ -38,7 +45,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-              className="glass p-8 rounded-3xl border border-white/5 hover:border-blue-500/30 transition-all group"
+              className="bg-[#111827] p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-all group"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-blue-600/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-600 transition-colors">

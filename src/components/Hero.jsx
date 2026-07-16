@@ -73,7 +73,7 @@ const Hero = () => {
             </a>
             <a
               href="#contact"
-              className="px-10 py-4 glass text-white rounded-xl font-bold hover:bg-white/10 transition-all transform hover:-translate-y-1"
+              className="px-10 py-4 bg-white/5 text-white rounded-xl font-bold hover:bg-white/10 transition-all transform hover:-translate-y-1"
             >
               Let&apos;s Talk
             </a>
@@ -86,9 +86,9 @@ const Hero = () => {
             className="mt-12 flex items-center justify-center lg:justify-start gap-8"
           >
             {[
-              { label: "1+ Year", sub: "Experience" },
-              { label: "5+", sub: "Projects" },
-              // { label: "200+", sub: "Daily Users" }
+              { label: "1+", sub: "Years Experience" },
+              { label: "6+", sub: "Featured Projects" },
+              { label: "3", sub: "Published Extensions" }
             ].map((stat, i) => (
               <div key={i} className="text-left border-l-2 border-blue-500/30 pl-4">
                 <div className="text-2xl font-bold text-white">{stat.label}</div>
@@ -137,7 +137,7 @@ const Hero = () => {
                 initial={{ x: 30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
-                className="absolute -right-8 top-12 glass p-4 rounded-2xl shadow-2xl hidden md:block"
+                className="absolute -right-8 top-12 bg-[#111827] border border-white/5 p-4 rounded-xl shadow-2xl hidden md:block"
               >
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-blue-500/20 rounded-lg">
