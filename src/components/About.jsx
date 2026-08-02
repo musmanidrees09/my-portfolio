@@ -1,83 +1,50 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
+import { Code2, Layers3, MapPin, Sparkles } from "lucide-react";
 
-const About = () => {
+const facts = [
+  { label: "Based in", value: "Lahore, Pakistan", icon: MapPin },
+  { label: "Role", value: "Full-stack developer", icon: Code2 },
+  { label: "Core stack", value: "Laravel + React", icon: Layers3 },
+  { label: "Availability", value: "Product work", icon: Sparkles },
+];
+
+export default function About() {
   return (
-    <section
-      id="about"
-      className="py-24 bg-[#0b1120] text-white px-6 relative overflow-hidden"
-    >
-      <div className="absolute top-0 right-0 w-[30%] h-[30%] bg-blue-600/10 blur-[100px] rounded-full"></div>
-
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-        {/* LEFT SIDE: Image/Icon Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative"
-        >
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            <div className="relative w-full h-[400px] bg-[#0f172a] rounded-2xl overflow-hidden border border-white/10 flex items-center justify-center">
-              <div className="text-9xl opacity-10 grayscale group-hover:grayscale-0 transition-all duration-500">👨‍💻</div>
-
-              {/* Technical Stack overlay */}
-              <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2">
-                {["Laravel", "React", "MySQL"].map((tag) => (
-                  <div key={tag} className="bg-white/5 text-[10px] py-1 text-center rounded-md font-bold uppercase tracking-widest text-blue-400">
-                    {tag}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Experience Card */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="absolute -bottom-6 -right-6 bg-[#111827] p-6 rounded-2xl border border-blue-500/30 shadow-2xl"
-          >
-            <p className="text-3xl font-black text-white leading-none">1+</p>
-            <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mt-1">Year Pro Experience</p>
-          </motion.div>
-        </motion.div>
-
-        {/* RIGHT SIDE: Narrative */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
-            <span className="text-blue-400 font-bold text-xs uppercase tracking-widest">
-              About Me
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
-            Building robust and
-            <br />
-            <span className="text-gradient">performant web solutions</span>
+    <section id="about" className="border-b border-[var(--rule)] bg-[var(--paper)]">
+      <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-20 sm:px-8 md:py-28 lg:grid-cols-[1.5fr_0.5fr] lg:gap-20 lg:px-12">
+        <div>
+          <p className="mono-label mb-8 flex items-center gap-3 text-[var(--muted)]">
+            <span className="text-[var(--ink)]">01</span>
+            <span className="h-px w-8 bg-[var(--rule)]" aria-hidden="true" />
+            About the work
+          </p>
+          <h2 className="text-wrap-balance max-w-4xl text-4xl font-semibold leading-[0.98] tracking-[-0.06em] text-[var(--ink)] sm:text-6xl lg:text-7xl">
+            Engineering that makes complicated workflows feel <span className="text-[var(--muted)]">simple.</span>
           </h2>
-
-          <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+          <div className="mt-10 max-w-3xl space-y-5 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">
             <p>
-              I'm a Full Stack Developer specializing in crafting secure, high-performance web applications. My core expertise lies in the <span className="text-white font-semibold">Laravel</span> ecosystem for robust backend solutions and <span className="text-white font-semibold">React/Next.js</span> for dynamic frontends.
+              My work sits between product thinking and implementation. I turn repetitive document, career, and browser workflows into focused tools people can understand quickly and trust daily.
             </p>
-
             <p>
-              My focus is on writing clean, maintainable code to solve complex problems and deliver exceptional user experiences. I enjoy taking a project from concept to production, whether it's a powerful web platform or a useful browser extension.
+              At Devonsite, I build production Laravel applications, optimize MySQL-backed systems, and connect responsive React interfaces to secure workflows. Outside client work, I shape useful Chrome extensions for the Toolscase ecosystem.
             </p>
           </div>
-        </motion.div>
+        </div>
+
+        <dl className="divide-y divide-[var(--rule)] border-y border-[var(--rule)] lg:mt-14">
+          {facts.map((fact) => {
+            const Icon = fact.icon;
+            return (
+              <div key={fact.label} className="flex items-start gap-4 py-5">
+                <Icon size={16} className="mt-1 text-[var(--muted)]" aria-hidden="true" />
+                <div>
+                  <dt className="mono-label text-[var(--muted)]">{fact.label}</dt>
+                  <dd className="mt-2 text-sm font-semibold text-[var(--ink)] sm:text-base">{fact.value}</dd>
+                </div>
+              </div>
+            );
+          })}
+        </dl>
       </div>
     </section>
   );
-};
-
-export default About;
+}

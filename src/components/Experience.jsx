@@ -1,101 +1,59 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
+const experience = [
+  {
+    period: "Jul 2024 — now",
+    role: "Full-stack web developer",
+    company: "Devonsite · Lahore",
+    summary:
+      "Architect production Laravel applications, optimize MySQL queries, and deliver secure role-based SaaS workflows with responsive React interfaces.",
+    stack: "Laravel / MySQL / React / RBAC",
+  },
+  {
+    period: "2020 — 2024",
+    role: "BS Computer Science",
+    company: "NCBA&E · 3.64 CGPA",
+    summary:
+      "Focused on software engineering, database systems, web security, and the fundamentals behind maintainable product delivery.",
+    stack: "Systems / Databases / Security",
+  },
+];
 
-const Experience = () => {
+export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-[#0b1120] text-white px-6 relative">
-      <div className="absolute bottom-0 left-0 w-[50%] h-[30%] bg-indigo-600/5 blur-[120px] rounded-full"></div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto relative z-10"
-      >
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Professional <span className="text-blue-500">Journey</span>
-          </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+    <section id="experience" className="editorial-grid border-b border-[var(--rule)] bg-[var(--paper)]">
+      <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 md:py-28 lg:px-12">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-end">
+          <div>
+            <p className="mono-label mb-8 flex items-center gap-3 text-[var(--muted)]">
+              <span className="text-[var(--ink)]">02</span>
+              <span className="h-px w-8 bg-[var(--rule)]" aria-hidden="true" />
+              Experience
+            </p>
+            <h2 className="text-wrap-balance max-w-2xl text-4xl font-semibold leading-[0.98] tracking-[-0.06em] text-[var(--ink)] sm:text-6xl">
+              A practical path from systems to shipped software.
+            </h2>
+          </div>
+          <p className="max-w-md text-base leading-7 text-[var(--muted)] lg:justify-self-end">
+            Roles, responsibilities, and the technologies behind the shipped work.
+          </p>
         </div>
 
-        <div className="space-y-12">
-          {/* Timeline Item 1: Devonsite */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="relative pl-8 md:pl-0"
-          >
-            {/* Desktop Timeline Dot */}
-            <div className="hidden md:block absolute left-1/2 -ml-3 top-0 w-6 h-6 rounded-full bg-blue-600 border-4 border-[#0b1120] z-20 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
-
-            <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
-              <div className="md:text-right mb-4 md:mb-0">
-                <h3 className="text-2xl font-black text-white">Full Stack Web Developer</h3>
-                <p className="text-blue-400 font-bold">Devonsite • Lahore</p>
-                <span className="inline-block mt-2 px-3 py-1 bg-blue-600/10 text-blue-400 rounded-full text-xs font-bold uppercase tracking-tighter">
-                  Jul 2024 - Present
-                </span>
-              </div>
-
-              <div className="bg-[#111827] p-6 rounded-2xl border border-white/5 shadow-lg relative">
-                {/* Mobile Timeline Pipe */}
-                <div className="md:hidden absolute -left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-transparent"></div>
-                <div className="md:hidden absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-blue-600 border-2 border-[#0b1120]"></div>
-
-                <ul className="space-y-3 text-gray-400 text-sm leading-relaxed">
-                  <li className="flex gap-2">
-                    <span className="text-blue-500 font-bold">▹</span>
-                    <span>Architected production <span className="text-white">Laravel</span> applications with secure, efficient workflows.</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-500 font-bold">▹</span>
-                    <span>Optimized MySQL queries, improving database performance.</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-500 font-bold">▹</span>
-                    <span>Implemented <span className="text-white">Role-Based Access Control (RBAC)</span> for multi-tenant SaaS environments.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Timeline Item 2: Education */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="relative pl-8 md:pl-0"
-          >
-             <div className="hidden md:block absolute left-1/2 -ml-3 top-0 w-6 h-6 rounded-full bg-surface-brighter border-4 border-[#0b1120] z-20"></div>
-
-             <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
-              <div className="hidden md:block">
-                <div className="bg-[#111827] p-6 rounded-2xl border border-white/5 opacity-80">
-                  <p className="text-gray-400 text-sm italic">Focus: Software Engineering, Database Systems, Web Security</p>
-                </div>
-              </div>
-
+        <div className="mt-14 border-t border-[var(--rule)]">
+          {experience.map((item) => (
+            <article
+              key={item.role}
+              className="grid gap-5 border-b border-[var(--rule)] py-7 transition-colors duration-200 hover:bg-white/60 md:grid-cols-[0.8fr_1.25fr_2fr_1fr] md:gap-8 md:px-4"
+            >
+              <p className="mono-label pt-1 text-[var(--muted)]">{item.period}</p>
               <div>
-                <h3 className="text-2xl font-black text-white">BS Computer Science</h3>
-                <p className="text-gray-500 font-bold">NCBA&E • 3.64 CGPA</p>
-                <span className="inline-block mt-2 px-3 py-1 bg-white/5 text-gray-400 rounded-full text-xs font-bold uppercase tracking-tighter">
-                  2020 - 2024
-                </span>
-
-                {/* Mobile Context */}
-                <div className="md:hidden mt-4 bg-[#111827] border border-white/5 p-4 rounded-xl text-xs text-gray-500">
-                  Focus: Software Engineering, Database Systems, Web Security
-                </div>
+                <h3 className="text-lg font-semibold tracking-tight text-[var(--ink)]">{item.role}</h3>
+                <p className="mt-1 text-sm text-[var(--muted)]">{item.company}</p>
               </div>
-            </div>
-          </motion.div>
+              <p className="max-w-xl text-sm leading-6 text-[var(--muted)]">{item.summary}</p>
+              <p className="mono-label pt-1 text-[var(--muted)] md:text-right">{item.stack}</p>
+            </article>
+          ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
-};
-
-export default Experience;
+}

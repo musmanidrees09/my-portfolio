@@ -1,41 +1,30 @@
-import React from "react";
+import { ArrowUp } from "lucide-react";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-[#0b1120] text-gray-500 py-12 px-6 border-t border-white/5 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
-        <div className="text-center md:text-left">
-          <span className="text-xl font-black tracking-tighter text-white">
-            M.<span className="text-blue-500">Usman</span>
+    <footer className="bg-[var(--ink)] px-5 py-8 text-white sm:px-8 lg:px-12">
+      <div className="mx-auto flex max-w-[1400px] flex-col gap-7 border-t border-white/15 pt-7 text-xs sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-base font-semibold tracking-tight">
+            Muhammad Usman <span className="text-white/45">/dev</span>
+          </p>
+          <p className="mono-label mt-2 text-white/45">Full-stack developer · Product builder</p>
+        </div>
+        <div className="flex flex-wrap items-center gap-5 text-white/60">
+          <span className="mono-label flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-[var(--accent)]" aria-hidden="true" />
+            Available for product work
           </span>
-          <p className="text-xs uppercase tracking-widest font-bold mt-2">Full Stack Developer</p>
-        </div>
-
-        <div className="flex gap-8 items-center">
+          <span className="mono-label">© {new Date().getFullYear()} Muhammad Usman</span>
           <a
-            href="https://www.linkedin.com/in/muhammad-usman09-idrees/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-all font-bold text-xs uppercase tracking-widest"
+            href="#top"
+            className="mono-label inline-flex items-center gap-2 text-white transition-opacity hover:opacity-60"
           >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/musmanidrees09"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-all font-bold text-xs uppercase tracking-widest"
-          >
-            GitHub
+            Back to top
+            <ArrowUp size={14} aria-hidden="true" />
           </a>
         </div>
-
-        <p className="text-[10px] uppercase font-bold tracking-[0.2em]">
-          &copy; {new Date().getFullYear()} Muhammad Usman. All Rights Reserved.
-        </p>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
