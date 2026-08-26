@@ -34,6 +34,10 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    overflow-x: clip;
+  }
+
   section[id],
   main[id] {
     scroll-margin-top: 88px;
@@ -96,10 +100,6 @@
 }
 
 @layer utilities {
-  .content-visibility-auto {
-    content-visibility: auto;
-    contain-intrinsic-size: 720px;
-  }
   .text-wrap-balance {
     text-wrap: balance;
   }

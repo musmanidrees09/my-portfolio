@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // Keep only the qualities used by this portfolio so invalid requests fail fast.
-    qualities: [65, 75],
+    // Keep all qualities used by portfolio components
+    qualities: [65, 70, 75, 80, 85],
     // AVIF/WebP reduce transfer size while preserving the original public assets.
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,

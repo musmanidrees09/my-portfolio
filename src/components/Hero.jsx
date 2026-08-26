@@ -1,96 +1,150 @@
-import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download, Mail, Terminal } from "lucide-react";
 import Image from "next/image";
-
-const proof = [
-  { value: "3", label: "web products" },
-  { value: "8", label: "browser extensions" },
-  { value: "Laravel", label: "core backend" },
-  { value: "React", label: "product UI" },
-];
+import { personalInfo } from "@/data/portfolio";
 
 export default function Hero() {
   return (
     <section id="home" className="editorial-grid border-b border-[var(--rule)]">
-      <div className="mx-auto grid max-w-[1400px] gap-14 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 lg:px-12 lg:py-28">
+      <div className="mx-auto grid max-w-[1400px] gap-10 px-5 py-10 sm:px-8 md:py-16 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14 lg:px-12 lg:py-20">
+        {/* Left Column: Positioning & CTAs */}
         <div className="flex flex-col justify-center">
           <p className="mono-label mb-7 flex items-center gap-3 text-[var(--muted)]">
             <span className="h-px w-8 bg-[var(--ink)]" aria-hidden="true" />
-            Full-stack developer · Lahore, Pakistan
+            Full-Stack Developer · Lahore, Pakistan
           </p>
-          <h1 className="text-wrap-balance max-w-4xl text-[clamp(3.5rem,8vw,7.75rem)] font-semibold leading-[0.9] tracking-[-0.075em] text-[var(--ink)]">
-            I build useful
-            <span className="relative z-0 block w-fit bg-[var(--accent)] px-2 pb-2 pt-1">
-              software for
-            </span>
-            the web.
+
+          <h1 className="text-wrap-balance max-w-4xl text-[clamp(2.15rem,4.2vw,4.25rem)] font-bold leading-[0.96] tracking-[-0.06em] text-[var(--ink)]">
+            Full-Stack Developer building{" "}
+            <span className="relative z-0 inline-block bg-[var(--accent)] px-2 pb-1 pt-0.5 text-[var(--ink)]">
+              SaaS platforms,
+            </span>{" "}
+            AI tools & browser extensions.
           </h1>
-          <p className="mt-9 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">
-            I design and ship practical SaaS platforms and browser extensions with Laravel, React, and thoughtful product engineering — from the first workflow to a reliable production release.
+
+          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-[var(--muted)] sm:text-base sm:leading-7">
+            {personalInfo.bio}
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+
+          {/* Action CTAs */}
+          <div className="mt-7 flex flex-wrap gap-2.5">
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-3 bg-[var(--ink)] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
+              className="inline-flex items-center justify-center gap-2 bg-[var(--ink)] px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
             >
-              View selected work
-              <ArrowUpRight size={15} aria-hidden="true" />
+              View Projects
+              <ArrowUpRight size={14} aria-hidden="true" />
             </a>
+
             <a
-              href="/Muhammad_Usman_Web_Developer_CV.pdf"
+              href={personalInfo.resumePdf}
               download
-              className="inline-flex items-center justify-center gap-3 border border-[var(--ink)] px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--ink)] transition-colors duration-200 hover:bg-white focus-visible:ring-2 focus-visible:ring-[var(--focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
+              className="inline-flex items-center justify-center gap-2 border border-[var(--ink)] bg-transparent px-4 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--ink)] transition-colors duration-200 hover:bg-white focus-visible:ring-2 focus-visible:ring-[var(--focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
             >
-              Download CV
-              <Download size={15} aria-hidden="true" />
+              Resume
+              <Download size={14} aria-hidden="true" />
+            </a>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)] transition-colors duration-200 hover:text-[var(--ink)]"
+            >
+              Discuss Project
+              <Mail size={13} aria-hidden="true" />
             </a>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 border-y border-[var(--rule)] sm:grid-cols-4">
-            {proof.map((item) => (
-              <div key={item.label} className="min-h-[92px] border-r border-[var(--rule)] px-4 py-5 first:pl-0 last:border-r-0 sm:px-5 sm:first:pl-5">
-                <p className="text-xl font-semibold tracking-tight text-[var(--ink)] sm:text-2xl">{item.value}</p>
-                <p className="mono-label mt-2 text-[var(--muted)]">{item.label}</p>
-              </div>
+          {/* Core Specialization Pills */}
+          <div className="mt-7 flex flex-wrap items-center gap-1.5 border-t border-[var(--rule)] pt-4">
+            <span className="mono-label mr-1.5 text-[10px] text-[var(--muted)]">Core Stack:</span>
+            {["Next.js", "React", "Laravel", "MERN Stack", "PHP", "MySQL", "Chrome MV3", "Tailwind"].map((tech) => (
+              <span
+                key={tech}
+                className="border border-[var(--rule)] bg-[var(--surface)] px-2 py-0.5 font-mono text-[10px] font-medium text-[var(--ink)]"
+              >
+                {tech}
+              </span>
             ))}
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center lg:justify-end">
-          <div className="relative w-full max-w-[560px]">
+        {/* Right Column: Technical Visual Card */}
+        <div className="relative flex items-center justify-center lg:justify-end overflow-hidden sm:overflow-visible">
+          <div className="relative w-full max-w-[460px]">
             <div className="relative isolate">
-              <div className="pointer-events-none absolute -bottom-4 -right-4 z-0 h-full w-full bg-[var(--accent)]" aria-hidden="true" />
-              <div className="relative z-10 aspect-[4/5] overflow-hidden border border-[var(--ink)] bg-white p-2 sm:p-3">
-                <Image
-                  src="/Profile.webp"
-                  alt="Muhammad Usman, full-stack developer based in Lahore"
-                  fill
-                  preload
-                  sizes="(max-width: 1024px) 90vw, 560px"
-                  quality={75}
-                  className="object-cover object-top"
-                />
-                <div className="pointer-events-none absolute inset-x-4 bottom-4 flex items-center justify-between border-t border-white/40 pt-3 text-[10px] font-medium uppercase tracking-[0.16em] text-white drop-shadow sm:inset-x-6 sm:bottom-6">
-                  <span>Muhammad Usman</span>
-                  <span className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-[var(--accent)]" aria-hidden="true" />
-                    Open to work
-                  </span>
+              {/* Offset Accent Box */}
+              <div
+                className="pointer-events-none absolute -bottom-2.5 -right-2.5 z-0 h-full w-full bg-[var(--accent)] border border-[var(--ink)]"
+                aria-hidden="true"
+              />
+
+              {/* Developer Portrait & System Console Container */}
+              <div className="relative z-10 border border-[var(--ink)] bg-white p-3 sm:p-3.5 shadow-sm">
+                {/* Visual Header */}
+                <div className="mb-2.5 flex items-center justify-between border-b border-[var(--rule)] pb-2">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-[#ef4444]" />
+                    <span className="h-2 w-2 rounded-full bg-[#eab308]" />
+                    <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
+                    <span className="mono-label ml-1.5 text-[9px] text-[var(--muted)]">engineer.config</span>
+                  </div>
+                  <span className="mono-label text-[9px] font-semibold text-[var(--ink)]">Production Ready</span>
+                </div>
+
+                {/* Profile Photo */}
+                <div className="relative aspect-[4/4.5] overflow-hidden border border-[var(--rule)] bg-[#1a1b18]">
+                  <Image
+                    src="/Profile.webp"
+                    alt="Muhammad Usman — Full-Stack Developer specializing in Next.js, React, Laravel, and Chrome extensions"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 90vw, 460px"
+                    quality={85}
+                    className="object-cover object-top"
+                  />
+
+                  {/* Status Overlay */}
+                  <div className="pointer-events-none absolute inset-x-2.5 bottom-2.5 flex items-center justify-between border border-white/20 bg-black/60 px-2.5 py-1.5 text-[9px] font-medium uppercase tracking-[0.12em] text-white backdrop-blur-sm">
+                    <span>Muhammad Usman</span>
+                    <span className="flex items-center gap-1 text-[var(--accent)]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] animate-pulse" aria-hidden="true" />
+                      Open for Work
+                    </span>
+                  </div>
+                </div>
+
+                {/* Mini System Specs Bar */}
+                <div className="mt-2.5 grid grid-cols-3 gap-1.5 border-t border-[var(--rule)] pt-2.5 text-center">
+                  <div className="border-r border-[var(--rule)] pr-1">
+                    <p className="font-mono text-[11px] font-bold text-[var(--ink)]">5+ Apps</p>
+                    <p className="mono-label text-[8px] text-[var(--muted)]">Live Projects</p>
+                  </div>
+                  <div className="border-r border-[var(--rule)] pr-1">
+                    <p className="font-mono text-[11px] font-bold text-[var(--ink)]">8+ Live</p>
+                    <p className="mono-label text-[8px] text-[var(--muted)]">Extensions</p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-[11px] font-bold text-[var(--ink)]">1.5+ Yrs</p>
+                    <p className="mono-label text-[8px] text-[var(--muted)]">Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <p className="mono-label mt-5 flex items-center justify-between text-[var(--muted)]">
-              <span className="whitespace-nowrap">Laravel / React / SaaS</span>
-              <span className="shrink-0">01 — 09</span>
-            </p>
+
+            <div className="mt-5 flex items-center justify-between text-[var(--muted)]">
+              <span className="mono-label text-[10px]">Lahore, Pakistan · UTC+5</span>
+              <span className="mono-label text-[10px]">musmanidrees08@gmail.com</span>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
       <a
-        href="#about"
-        className="mx-auto flex w-fit items-center gap-2 pb-8 text-[var(--muted)] transition-colors hover:text-[var(--ink)]"
-        aria-label="Scroll to about section"
+        href="#what-i-build"
+        className="mx-auto flex w-fit items-center gap-2 pb-5 text-[var(--muted)] transition-colors hover:text-[var(--ink)]"
+        aria-label="Scroll to specialization section"
       >
-        <span className="mono-label">Scroll to explore</span>
+        <span className="mono-label">Explore Engineering Work</span>
         <ArrowDown size={14} aria-hidden="true" />
       </a>
     </section>

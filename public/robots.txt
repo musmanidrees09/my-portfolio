@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m-usman-idrees.vercel.app/sitemap.xml

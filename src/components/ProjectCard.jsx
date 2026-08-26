@@ -1,113 +1,115 @@
-import { ArrowUpRight } from "lucide-react";
+"use client";
+
+import { ArrowUpRight, BookOpen } from "lucide-react";
 import Image from "next/image";
 
-function StatusBadge({ status, label }) {
-  const isLive = status === "live";
-
+export default function ProjectCard({ project, index, onOpenCaseStudy }) {
   return (
-    <span
-      className={`inline-flex items-center gap-2 border px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.14em] ${
-        isLive
-          ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--ink)]"
-          : "border-white/25 bg-white/5 text-white"
-      }`}
-    >
-      <span
-        className={`h-1.5 w-1.5 rounded-full ${isLive ? "bg-[var(--ink)]" : "bg-white/60"}`}
-        aria-hidden="true"
-      />
-      {label}
-    </span>
-  );
-}
+    <article className="group overflow-hidden border border-[var(--dark-rule)] bg-[#151614] text-white transition-all duration-300 hover:border-white/30">
+      <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+        {/* Left Side: Screenshot & Badges */}
+        <div className="relative aspect-[16/10] min-h-[190px] overflow-hidden bg-[#1c1d1a] sm:min-h-[240px] lg:min-h-[280px]">
+          <Image
+            src={project.image.src}
+            alt={project.image.alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 650px"
+            priority={index < 2}
+            quality={75}
+            className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+          />
+          <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
 
-export default function ProjectCard({ project, index, featured = false }) {
-  const isWebsite = project.category === "website";
-
-  return (
-    <article
-      className={`content-visibility-auto group overflow-hidden border border-[var(--dark-rule)] bg-[#171816] ${
-        isWebsite
-          ? "grid gap-0 lg:grid-cols-[minmax(0,1.75fr)_minmax(250px,0.8fr)]"
-          : "flex flex-col"
-      }`}
-    >
-      <div
-        className={`relative overflow-hidden bg-[#20211f] ${
-          isWebsite ? "aspect-[16/9] min-h-[220px]" : "aspect-[16/10]"
-        }`}
-      >
-        <Image
-          src={project.image.src}
-          alt={project.image.alt}
-          fill
-          sizes={
-            isWebsite
-              ? "(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 900px"
-              : "(max-width: 768px) 100vw, 560px"
-          }
-          loading="lazy"
-          fetchPriority="low"
-          decoding="async"
-          quality={65}
-          className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.025]"
-        />
-        <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
-        <div className="absolute left-4 top-4">
-          <StatusBadge status={project.status} label={project.statusLabel} />
-        </div>
-      </div>
-
-      <div className={`flex flex-col ${isWebsite ? "p-6 sm:p-8" : "p-5 sm:p-6"}`}>
-        <div className="flex items-start justify-between gap-4">
-          <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-white/45">
-            {isWebsite ? "Web product" : "Chrome extension"} · {String(index + 1).padStart(2, "0")}
-          </p>
-          {project.link ? (
-            <a
-              href={project.link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${project.link.label}: ${project.title}`}
-              className="inline-flex h-8 w-8 shrink-0 items-center justify-center border border-white/15 text-white/70 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
-            >
-              <ArrowUpRight size={15} aria-hidden="true" />
-            </a>
-          ) : (
-            <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-white/40">In development</span>
-          )}
-        </div>
-
-        <h3 className={`mt-5 font-semibold tracking-tight text-white ${isWebsite ? "text-2xl sm:text-3xl" : "text-xl"}`}>
-          {project.title}
-        </h3>
-        <p className={`mt-3 text-sm leading-6 text-white/60 ${isWebsite ? "max-w-md" : "min-h-[72px]"}`}>
-          {project.description}
-        </p>
-
-        <div className="mt-auto flex flex-wrap gap-x-3 gap-y-2 pt-6">
-          {project.technologies.map((technology) => (
-            <span key={technology} className="font-mono text-[10px] uppercase tracking-[0.12em] text-white/45">
-              {technology}
+          {/* Top Left: Category */}
+          <div className="absolute left-3 top-3 sm:left-4 sm:top-4">
+            <span className="inline-flex items-center gap-1.5 border border-white/20 bg-black/60 px-2.5 py-0.5 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-sm">
+              {project.category}
             </span>
-          ))}
+          </div>
+
+          {/* Top Right: Status Badge */}
+          <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
+            <span className="inline-flex items-center gap-1.5 border border-[#86efac]/40 bg-[#86efac]/10 px-2 py-0.5 font-mono text-[9px] sm:text-[10px] font-medium uppercase tracking-widest text-[#86efac] backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#86efac] animate-pulse" aria-hidden="true" />
+              {project.statusLabel}
+            </span>
+          </div>
         </div>
 
-        {project.link ? (
-          <a
-            href={project.link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-7 inline-flex w-fit items-center gap-2 border-b border-white/35 pb-1 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--focus)] focus-visible:ring-offset-4 focus-visible:ring-offset-[#171816]"
-          >
-            {isWebsite ? "Open product" : "View listing"}
-            <ArrowUpRight size={14} aria-hidden="true" />
-          </a>
-        ) : (
-          <span className="mt-7 inline-flex w-fit border-b border-white/15 pb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/40">
-            Coming soon
-          </span>
-        )}
+        {/* Right Side: Deep Engineering Content */}
+        <div className="flex flex-col justify-between p-5 sm:p-6 lg:p-7">
+          <div>
+            <div className="flex items-center justify-between">
+              <p className="mono-label text-xs text-[var(--accent)]">Project 0{index + 1}</p>
+              <span className="mono-label text-[10px] text-white/40">{project.badge || "Live Product"}</span>
+            </div>
+
+            <h3 className="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl">
+              {project.title}
+            </h3>
+            <p className="mono-label mt-0.5 text-[10px] sm:text-[11px] text-white/60">
+              {project.subtitle}
+            </p>
+
+            <p className="mt-3 text-xs sm:text-sm leading-relaxed text-white/70">
+              {project.description}
+            </p>
+
+            {/* Role & Specific Contribution Metadata Box */}
+            <div className="mt-4 border border-white/10 bg-white/[0.03] p-3 space-y-1.5">
+              <div>
+                <span className="mono-label text-[9px] text-[var(--accent)]">My Role: </span>
+                <span className="text-xs font-bold text-white">{project.role}</span>
+              </div>
+              <div>
+                <span className="mono-label text-[9px] text-white/50">Contribution: </span>
+                <span className="text-xs text-white/80 leading-relaxed block mt-0.5">{project.contribution}</span>
+              </div>
+              {project.impact && (
+                <div className="border-t border-white/10 pt-1.5">
+                  <span className="mono-label text-[9px] text-[#86efac]">Result: </span>
+                  <span className="text-xs font-semibold text-white">{project.impact}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Tech Stack Pills */}
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[9px] text-white/75"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Action CTAs */}
+          <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-white/10 pt-4">
+            <button
+              type="button"
+              onClick={() => onOpenCaseStudy(project)}
+              className="inline-flex items-center gap-2 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-black transition-all hover:bg-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
+            >
+              <BookOpen size={13} aria-hidden="true" />
+              Case Study
+            </button>
+
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 border border-white/20 bg-transparent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:border-white hover:bg-white/10"
+              >
+                Visit Site
+                <ArrowUpRight size={13} aria-hidden="true" />
+              </a>
+            )}
+          </div>
+        </div>
       </div>
     </article>
   );
