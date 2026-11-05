@@ -16,10 +16,10 @@ export default function Footer() {
             </p>
           </div>
           <p className="mono-label mt-2 text-white/50">
-            Full-Stack Developer · Next.js, React, MERN &amp; Laravel Platforms
+            Full-Stack Web Developer · Next.js, React &amp; Laravel
           </p>
           <p className="mt-1 text-xs text-white/40">
-            Lahore, Pakistan · Open to worldwide remote & on-site opportunities
+            Lahore, Pakistan · Open to remote opportunities worldwide
           </p>
         </div>
 
@@ -47,6 +47,14 @@ export default function Footer() {
               className="mono-label transition-colors hover:text-white"
             >
               Email
+            </a>
+            <a
+              href={personalInfo.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mono-label text-[#86efac] transition-colors hover:underline"
+            >
+              WhatsApp
             </a>
           </div>
 

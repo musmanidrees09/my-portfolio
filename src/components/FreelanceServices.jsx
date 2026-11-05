@@ -1,4 +1,4 @@
-import { ArrowUpRight, Cpu, Database, Download, FileText, Layers, Layout, Server } from "lucide-react";
+import { ArrowUpRight, Cpu, Database, Download, FileText, Layers, Layout, MessageSquare, Search, Server } from "lucide-react";
 import { clientServices, personalInfo } from "@/data/portfolio";
 
 const iconMap = {
@@ -8,6 +8,7 @@ const iconMap = {
   Server: Server,
   FileText: FileText,
   Database: Database,
+  Search: Search,
 };
 
 export default function FreelanceServices() {
@@ -19,14 +20,14 @@ export default function FreelanceServices() {
             <p className="mono-label mb-5 flex items-center gap-3 text-[var(--muted)]">
               <span className="text-[var(--ink)]">08</span>
               <span className="h-px w-8 bg-[var(--rule)]" aria-hidden="true" />
-              Client & Freelance Services
+              Client &amp; Engineering Services
             </p>
             <h2 className="text-wrap-balance max-w-3xl text-3xl font-semibold leading-[0.98] tracking-[-0.06em] text-[var(--ink)] sm:text-5xl">
-              Need a SaaS, web app, or browser extension built?
+              What I Can Build For You.
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-[var(--muted)] lg:justify-self-end">
-            Available for full-time engineering positions, technical contract engagements, and end-to-end product architecture.
+            Available for full-time engineering roles, freelance contracts, and end-to-end web development for startups, businesses, and agencies worldwide.
           </p>
         </div>
 
@@ -57,7 +58,7 @@ export default function FreelanceServices() {
 
                 <div className="mt-6 border-t border-[var(--rule)] pt-3">
                   <span className="mono-label text-[9px] font-semibold text-[var(--ink)]">
-                    Production Grade
+                    Production Ready · Clean Code
                   </span>
                 </div>
               </div>
@@ -72,23 +73,31 @@ export default function FreelanceServices() {
               Have a project or opportunity in mind?
             </h3>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
-              Let&apos;s discuss scope, technical feasibility, timeline, and how I can help bring your software product to life.
+              Let&apos;s talk through your goals, timeline, and budget. I respond quickly and can jump on a call or chat on WhatsApp anytime.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="#contact"
+              href={personalInfo.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[var(--ink)] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition-transform hover:-translate-y-0.5 hover:bg-black"
             >
-              Discuss a Project
+              <MessageSquare size={14} aria-hidden="true" />
+              Chat on WhatsApp
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 border border-[var(--ink)] bg-transparent px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-[var(--ink)] transition-colors hover:bg-white"
+            >
+              Send an Email
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
             <a
               href={personalInfo.resumePdf}
               download
-              className="inline-flex items-center justify-center gap-2 border border-[var(--ink)] bg-transparent px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-[var(--ink)] transition-colors hover:bg-white"
+              className="inline-flex items-center justify-center gap-2 border border-[var(--rule)] bg-[var(--surface)] px-4 py-3.5 text-xs font-bold uppercase tracking-wider text-[var(--muted)] transition-colors hover:text-[var(--ink)]"
             >
-              Download Resume
               <Download size={14} aria-hidden="true" />
             </a>
           </div>

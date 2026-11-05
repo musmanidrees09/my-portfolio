@@ -8,17 +8,24 @@ export default function Hero() {
       <div className="mx-auto grid max-w-[1400px] gap-10 px-5 py-10 sm:px-8 md:py-16 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14 lg:px-12 lg:py-20">
         {/* Left Column: Positioning & CTAs */}
         <div className="flex flex-col justify-center">
-          <p className="mono-label mb-7 flex items-center gap-3 text-[var(--muted)]">
-            <span className="h-px w-8 bg-[var(--ink)]" aria-hidden="true" />
-            Full-Stack Developer · Lahore, Pakistan
-          </p>
+          <div className="mb-5 flex flex-wrap items-center gap-2">
+            <span className="mono-label flex items-center gap-2 text-[var(--muted)]">
+              <span className="h-px w-6 bg-[var(--ink)]" aria-hidden="true" />
+              <span className="font-semibold text-[var(--ink)]">Full-Stack Web Developer</span>
+              <span>·</span>
+              <span>Lahore, Pakistan</span>
+            </span>
+            <span className="inline-flex items-center rounded-full border border-emerald-600/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[9px] font-semibold text-emerald-800">
+              🌍 Open to remote roles &amp; freelance projects worldwide
+            </span>
+          </div>
 
           <h1 className="text-wrap-balance max-w-4xl text-[clamp(2.15rem,4.2vw,4.25rem)] font-bold leading-[0.96] tracking-[-0.06em] text-[var(--ink)]">
             Full-Stack Developer building{" "}
             <span className="relative z-0 inline-block bg-[var(--accent)] px-2 pb-1 pt-0.5 text-[var(--ink)]">
-              SaaS platforms,
+              clean, fast web apps,
             </span>{" "}
-            AI tools & browser extensions.
+            SaaS tools &amp; Chrome extensions.
           </h1>
 
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-[var(--muted)] sm:text-base sm:leading-7">
@@ -31,7 +38,7 @@ export default function Hero() {
               href="#projects"
               className="inline-flex items-center justify-center gap-2 bg-[var(--ink)] px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-black focus-visible:ring-2 focus-visible:ring-[var(--focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
             >
-              View Projects
+              View Live Projects
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
 
@@ -45,18 +52,26 @@ export default function Hero() {
             </a>
 
             <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)] transition-colors duration-200 hover:text-[var(--ink)]"
+              href={personalInfo.whatsappUrl || "#contact"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--ink)] border border-[var(--ink)]/30 hover:border-[var(--ink)] transition-colors duration-200"
             >
-              Discuss Project
-              <Mail size={13} aria-hidden="true" />
+              Quick WhatsApp
+              <ArrowUpRight size={13} aria-hidden="true" />
             </a>
           </div>
 
+          {/* Global Client & Timezone Notice */}
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] text-[var(--muted)]">
+            <span className="font-semibold text-[var(--ink)]">Working Hours:</span>
+            <span>Flexible timezone overlap with teams in the US, UK, Europe, Gulf, and Asia</span>
+          </div>
+
           {/* Core Specialization Pills */}
-          <div className="mt-7 flex flex-wrap items-center gap-1.5 border-t border-[var(--rule)] pt-4">
+          <div className="mt-6 flex flex-wrap items-center gap-1.5 border-t border-[var(--rule)] pt-4">
             <span className="mono-label mr-1.5 text-[10px] text-[var(--muted)]">Core Stack:</span>
-            {["Next.js", "React", "Laravel", "MERN Stack", "PHP", "MySQL", "Chrome MV3", "Tailwind"].map((tech) => (
+            {["Next.js 16", "React 19", "Laravel 13", "MERN Stack", "TypeScript", "MySQL", "Chrome MV3", "Tailwind"].map((tech) => (
               <span
                 key={tech}
                 className="border border-[var(--rule)] bg-[var(--surface)] px-2 py-0.5 font-mono text-[10px] font-medium text-[var(--ink)]"

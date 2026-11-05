@@ -26,7 +26,7 @@ export default function Projects() {
               </h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-white/60 lg:justify-self-end">
-              Live client and personal production systems built with Next.js, React, and Laravel with explicit engineering contributions and architecture breakdowns.
+              Real projects built with Next.js, React, and Laravel—with technical breakdowns of what I built and the results achieved.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function Projects() {
                 Looking for browser-level automation & AI tools?
               </h3>
               <p className="mt-1 text-xs text-white/60">
-                Explore 8+ live Manifest V3 Chrome extensions built with content scripts, background workers, and AI pipelines.
+                Explore 10+ live Manifest V3 Chrome extensions built with content scripts, background workers, and AI pipelines.
               </p>
             </div>
             <a

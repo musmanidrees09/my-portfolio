@@ -13,11 +13,11 @@ export default function HowIWork() {
               Engineering Lifecycle
             </p>
             <h2 className="text-wrap-balance max-w-3xl text-3xl font-semibold leading-[0.98] tracking-[-0.06em] text-[var(--ink)] sm:text-5xl">
-              How I Work & Deliver.
+              How I Work &amp; Deliver.
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-[var(--muted)] lg:justify-self-end">
-            A structured, repeatable engineering process that bridges product ambiguity with disciplined delivery.
+            A straightforward development process focused on clear communication, quick turnarounds, and reliable code.
           </p>
         </div>
 

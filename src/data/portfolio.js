@@ -7,13 +7,17 @@ const image = (src, alt) => ({
 
 export const personalInfo = {
   name: "Muhammad Usman",
-  title: "Full-Stack Developer",
-  tagline: "Full-Stack Developer building Next.js & React web apps, Laravel platforms, MERN stack & Chrome extensions.",
-  bio: "I build and ship production web applications, SaaS platforms, and browser extensions using Next.js, React, Laravel, Node.js, MongoDB, and JavaScript — from scalable backend architectures and REST APIs to polished, high-performance product interfaces.",
-  location: "Lahore, Punjab, Pakistan",
+  title: "Full-Stack Web Developer",
+  tagline: "Building reliable web apps, SaaS tools, and Chrome extensions with Next.js, React, and Laravel.",
+  bio: "I'm a full-stack developer who enjoys building practical, fast web applications that solve real problems. Over the last year and a half, I've built SaaS platforms, e-commerce portals, and 10 live Chrome extensions. I work mostly with Next.js, React, Laravel, and MySQL—writing clean code, keeping databases fast, and shipping features quickly.",
+  location: "Lahore, Pakistan (Open to remote work worldwide)",
+  timezones: "Flexible hours — able to overlap with US, UK, European, Gulf, and Asian working days",
+  targetMarkets: "Available for remote roles and freelance projects with clients and teams worldwide",
   email: "musmanidrees08@gmail.com",
   phone: "+92 3096134235",
-  availability: "Available for full-time roles & select freelance projects",
+  whatsappUrl: "https://wa.me/923096134235?text=Hi%20Usman,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
+  availability: "Available immediately for full-time remote roles and freelance projects",
+  paymentMethods: "Easy international invoicing: USD, GBP, EUR, AED, PKR via Payoneer, Wise, Stripe, Wire Transfer & Raast",
   github: "https://github.com/musmanidrees09",
   linkedin: "https://www.linkedin.com/in/muhammad-usman09-idrees/",
   portfolioUrl: "https://m-usman-idrees.vercel.app/",
@@ -34,7 +38,7 @@ export const proofMetrics = [
     description: "Client & personal production applications running in production",
   },
   {
-    value: "8+",
+    value: "10+",
     suffix: "live",
     label: "Browser Extensions Shipped",
     description: "Manifest V3 extensions live on Chrome Web Store",
@@ -96,114 +100,114 @@ export const featuredProjects = [
   {
     slug: "prospetra",
     title: "Prospetra",
-    subtitle: "Modern High-Converting B2B & Lead Generation Platform",
-    category: "Live Platform",
-    badge: "Live Project",
+    subtitle: "Automated Website Diagnostic SaaS & Technical SEO Engine",
+    category: "Live SaaS Platform",
+    badge: "Flagship SaaS",
     status: "live",
-    statusLabel: "Live",
-    role: "Full-Stack Developer",
-    contribution: "Full-Stack Development · Next.js & React Architecture · Responsive UI Engineering · SEO & Performance Optimization",
+    statusLabel: "Live SaaS",
+    role: "Full-Stack Web Developer",
+    contribution: "Next.js 16 App Router · Laravel 13 Queue Workers · Stripe Checkout · Core Web Vitals Optimization",
     description:
-      "A high-converting live B2B platform engineered with modern Next.js and React, featuring dynamic animations, fast page loads, responsive layouts, and seamless user conversion funnels.",
-    impact: "Live Production Platform · 95+ Lighthouse Score · Ultra-responsive design",
+      "A fast website audit tool that scans public sites in under 15 seconds, checking speed, SEO, and accessibility issues with verifiable proof instead of guesswork. Built with Next.js 16 on the frontend and Laravel queues on the backend, complete with Stripe checkout and automated PDF reports.",
+    impact: "Live Production SaaS · 100/100 Lighthouse Performance · Sub-Second TTFB",
     image: image(
-      "/All Extension and Websites images with there name/Prospetra.webp",
-      "Prospetra website interface displaying modern hero section and B2B features"
+      "/All Extension and Websites images with there name/Prospetra-New.webp",
+      "Prospetra website interface displaying the new audit engine and diagnostic cards"
     ),
-    technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "REST APIs", "Modern UI/UX"],
+    technologies: ["Next.js 16", "React 19", "Laravel 13", "TypeScript", "Tailwind CSS", "REST APIs", "Stripe"],
     liveUrl: "https://prospetra.com/",
     githubUrl: null,
     isPrivate: true,
     caseStudy: {
       overview:
-        "Prospetra is a live, modern B2B platform built to empower businesses with high-converting client acquisition, structured lead generation pipelines, and compelling interactive digital experiences.",
+        "Prospetra is a live web application designed to run fast, transparent website audits. It tests Core Web Vitals, mobile responsiveness, and technical SEO, and gives site owners clear evidence of what is broken and how to fix it.",
       problem:
-        "B2B service businesses need web platforms that combine instant loading speeds, crisp typography, clean brand messaging, and responsive touchpoints to maximize conversion rates.",
-      myRole: "Full-Stack Developer (End-to-End Implementation)",
+        "Most website audit tools either take minutes to run or hide everything behind expensive enterprise paywalls without showing the actual evidence behind each warning.",
+      myRole: "Full-Stack Developer (Sole Implementation)",
       contributions: [
-        "Architected modern frontend workflows using Next.js and React with component modularity.",
-        "Crafted a bespoke, responsive UI utilizing Tailwind CSS with smooth transitions and micro-interactions.",
-        "Optimized asset loading, images, and script delivery to achieve top Lighthouse performance scores.",
-        "Integrated interactive call-to-action flows and dynamic inquiry routing.",
+        "Built the modern frontend with Next.js 16 App Router and React Server Components for fast initial page loads.",
+        "Created a two-stage Laravel 13 queue worker system to handle URL crawling and report generation without freezing the UI.",
+        "Added Stripe checkout integration for automated plan upgrades and report downloads.",
+        "Built interactive ROI calculators and accessibility diagnostic tools that score 100/100 on Google Lighthouse.",
       ],
       architectureDiagram: [
-        { step: "Client Request", detail: "Edge-cached static pages with Next.js SSR/SSG" },
-        { step: "React UI Layer", detail: "Interactive components with responsive layout breakpoints" },
-        { step: "Conversion Funnel", detail: "Lead capture forms with real-time validation" },
-        { step: "Optimized Delivery", detail: "Compressed WebP assets and minimal bundle payload" },
+        { step: "Client Request", detail: "Next.js 16 edge-rendered pages with clean, responsive UI" },
+        { step: "Audit Submission", detail: "Validated URL dispatched to backend API with rate-limiting" },
+        { step: "Queue Processing", detail: "Background worker runs deterministic tests and compiles scores" },
+        { step: "Results Delivery", detail: "Live report rendered on screen with optional PDF export" },
       ],
       challenges: [
         {
-          challenge: "Achieving Sub-Second Load Times with Rich Aesthetics",
+          challenge: "Keeping Audit Wait Times Under 15 Seconds",
           solution:
-            "Implemented next/image optimizations, CSS tokenization, and lazy loading for off-screen components to maintain instantaneous initial page paint.",
+            "Separated quick on-page checks from slower external lookups, streaming early results to the user while background jobs finish the report.",
         },
         {
-          challenge: "Cross-Device Layout Precision",
+          challenge: "Preventing Layout Shifts on Mobile",
           solution:
-            "Engineered flexible grid systems and custom breakpoints ensuring seamless visual continuity across mobile, tablet, and ultra-wide screens.",
+            "Carefully tested layouts across small mobile screens, tablets, and desktops using automated browser tests to ensure zero horizontal scroll bugs.",
         },
       ],
       results: [
-        "Successfully launched and running live at prospetra.com.",
-        "Exceptional performance, accessibility, and SEO audit scores.",
+        "Live and running smoothly in production at prospetra.com.",
+        "Scores 100/100 on mobile Lighthouse for SEO and Accessibility.",
       ],
     },
   },
   {
     slug: "halvex-group",
     title: "Halvex Group",
-    subtitle: "Enterprise Corporate & Industrial Solutions Platform",
-    category: "Client Project",
-    badge: "Client Project",
+    subtitle: "B2B Manufacturing & Export Website",
+    category: "Commercial B2B Platform",
+    badge: "Export Portal",
     status: "live",
-    statusLabel: "Live Client Site",
-    role: "Full-Stack Developer (Client Project)",
-    contribution: "Client Requirements Translation · Full-Stack Implementation · Responsive System Architecture · Production Deployment",
+    statusLabel: "Live Platform",
+    role: "Full-Stack Web Developer & Technical Partner",
+    contribution: "Full-Stack Architecture · B2B Quote Forms · Product Catalog Structure · Responsive Design",
     description:
-      "A full-scale corporate web platform built for Halvex Group, presenting industrial solutions, service portfolios, inquiry channels, and corporate governance with enterprise-grade stability.",
-    impact: "Live Enterprise Client Platform · Deployed & Actively Maintained",
+      "A clean B2B wholesale website built for an export manufacturing business in Sialkot, Pakistan. It showcases certified safety gloves, surgical instruments, and custom leather jackets with a streamlined Request-for-Quote (RFQ) form and prototype sample request flow for international buyers.",
+    impact: "Active Global B2B Export Portal · Live at halvexgroup.com",
     image: image(
-      "/All Extension and Websites images with there name/Halvex Group.webp",
-      "Halvex Group corporate website interface showcasing industrial capabilities and corporate design"
+      "/All Extension and Websites images with there name/Halvex-Group-New.webp",
+      "Halvex Group B2B manufacturing website showing products and export capabilities"
     ),
-    technologies: ["React", "Next.js", "PHP", "Tailwind CSS", "REST APIs", "Responsive Design"],
-    liveUrl: "http://halvexgroup.com/",
+    technologies: ["React", "Next.js", "PHP", "Tailwind CSS", "REST APIs", "B2B RFQ Funnels"],
+    liveUrl: "https://halvexgroup.com/",
     githubUrl: null,
     isPrivate: true,
     caseStudy: {
       overview:
-        "Halvex Group is an enterprise client web platform developed to represent the company's multi-disciplinary industrial solutions, services, and corporate capabilities to global stakeholders.",
+        "Halvex Group is a B2B export website showcasing industrial protective gloves, surgical instruments, and leather apparel manufactured in Sialkot, Pakistan for overseas wholesale distributors and sourcing teams.",
       problem:
-        "The client required a professional, robust online presence that effectively communicated complex service offerings while maintaining rapid load times and accessible navigation across all devices.",
-      myRole: "Full-Stack Developer (Client Project Delivery)",
+        "Traditional exporter websites in the region are often outdated, not mobile-friendly, and difficult to navigate, causing international buyers to bounce without sending inquiries.",
+      myRole: "Full-Stack Web Developer (Design, Frontend & Backend)",
       contributions: [
-        "Collaborated directly on client requirements to architect intuitive information architecture.",
-        "Built modular, responsive UI components tailored to the corporate brand identity.",
-        "Engineered contact channels and quotation inquiry workflows.",
-        "Conducted cross-browser compatibility testing and deployed to client production hosting.",
+        "Organized hundreds of product lines into three distinct, easy-to-browse divisions: Gloves, Jackets, and Surgical Tools.",
+        "Built simple, friction-free quotation and sample-request forms that go straight to the sales team's inbox.",
+        "Ensured fast loading speeds and smooth mobile browsing for overseas buyers checking products on their phones.",
+        "Set up secure form validation to prevent spam and keep inquiries genuine.",
       ],
       architectureDiagram: [
-        { step: "User Ingestion", detail: "Structured navigation with instant corporate capability catalog" },
-        { step: "Frontend Interface", detail: "Accessible, responsive React component system" },
-        { step: "Backend / Inquiries", detail: "Validated form handlers routing client leads securely" },
-        { step: "Production Server", detail: "Optimized static delivery with reliable uptime" },
+        { step: "Procurement Ingestion", detail: "Category-filtered OEM catalog with technical compliance details" },
+        { step: "Interactive RFQ Layer", detail: "Structured quote builder allowing custom specification inputs" },
+        { step: "Lead Dispatch System", detail: "Validated form handlers routing international inquiries securely" },
+        { step: "Global Edge Delivery", detail: "High-speed static caching for US, European, and Gulf visitors" },
       ],
       challenges: [
         {
-          challenge: "Translating Complex Industrial Services into Clean UI",
+          challenge: "Translating Complex Technical Specifications into an Intuitive UI",
           solution:
-            "Created structured categorization cards and visual hierarchy modules that clearly distinguish service divisions without overwhelming visitors.",
+            "Created modular specification tables and badge indicators highlighting EN 388 and CE compliance standards without cluttering product photography.",
         },
         {
-          challenge: "Mobile Optimization for Executive Stakeholders",
+          challenge: "Ensuring Fast Global Loading Over Varied Mobile Networks",
           solution:
-            "Rigorous responsive design audits across viewport widths, ensuring effortless navigation on smartphones and tablets.",
+            "Optimized image compression to WebP and inlined critical styling, achieving rapid first paint even on 4G cellular connections across target export markets.",
         },
       ],
       results: [
-        "Delivered and launched live client website meeting all commercial milestones.",
-        "High stakeholder satisfaction with positive feedback on clean navigation and performance.",
+        "Delivered a live commercial export platform meeting international B2B buyer expectations.",
+        "Clean, responsive product catalog supporting direct wholesale inquiries at halvexgroup.com.",
       ],
     },
   },
@@ -349,8 +353,8 @@ export const featuredProjects = [
     role: "Full-Stack Developer",
     contribution: "Modular Architecture · 75+ Custom Tools Built by Me · 108 Total PDF Tools Suite · 35+ Browser Tools · Middleware Auth",
     description:
-      "A high-capacity digital utility hub integrating 108 total PDF tools (with 75+ custom tools engineered by me), 35+ browser tools, career utilities, and 8 live Chrome extensions into a unified architecture.",
-    impact: "108 PDF Tools (75+ built by me) · 35+ Browser Tools · 8 Extensions",
+      "A high-capacity digital utility hub integrating 108 total PDF tools (with 75+ custom tools engineered by me), 35+ browser tools, career utilities, and 10 live Chrome extensions into a unified architecture.",
+    impact: "108 PDF Tools (75+ built by me) · 35+ Browser Tools · 10 Extensions",
     image: image(
       "/All Extension and Websites images with there name/Toolscase Website.webp",
       "Toolscase platform homepage showing suite of web tools, PDF utilities, and extensions"
@@ -361,7 +365,7 @@ export const featuredProjects = [
     isPrivate: true,
     caseStudy: {
       overview:
-        "Toolscase is a modular ecosystem bringing together 108 total PDF processing utilities (over 75+ built by Muhammad Usman), 35+ browser tools, CV creation, and browser extension integrations into one coherent platform.",
+        "Toolscase is a modular ecosystem bringing together 108 total PDF processing utilities (over 75+ built by Muhammad Usman), 35+ browser tools, CV creation, and 10 live browser extension integrations into one coherent platform.",
       problem:
         "Managing dozens of standalone utility endpoints leads to fragmented codebases, conflicting routes, duplicated authentication logic, and high operational maintenance overhead.",
       myRole: "Full-Stack Developer (Core Ecosystem Architecture & 75+ Custom Tool Modules)",
@@ -451,6 +455,48 @@ export const inProgressProjects = [
 ];
 
 export const chromeExtensions = [
+  {
+    slug: "voxcue-ai",
+    title: "VoxCue AI",
+    fullName: "VoxCue AI — Live Speech-to-Text & Subtitles",
+    category: "AI Tools",
+    categoryKey: "ai",
+    status: "live",
+    statusLabel: "Live on Chrome Web Store",
+    featured: true,
+    rating: "Live Product",
+    description:
+      "Real-time speech-to-text with synchronized subtitles and scroll-synced transcripts for YouTube, Vimeo, webinars, and web video—rendered via Shadow DOM injection directly over the player.",
+    image: image(
+      "/All Extension and Websites images with there name/VoxCue-AI.webp",
+      "VoxCue AI Chrome extension live video speech to text transcription and subtitle overlay"
+    ),
+    technologies: ["Chrome MV3", "Live Speech-to-Text", "Shadow DOM Injection", "Side Panel API", "AI Transcription"],
+    architectureHighlights: "Shadow DOM video subtitle overlay, Side Panel API synchronization, real-time audio stream transcript chunking.",
+    storeUrl:
+      "https://chromewebstore.google.com/detail/voxcue-ai-transcript-summ/jekdafddelbefiiedfnjjljkhbdfoael?authuser=0&hl=en",
+  },
+  {
+    slug: "leadintel-ai",
+    title: "LeadIntel AI",
+    fullName: "LeadIntel AI — Tech Stack & B2B Sales Prospector",
+    category: "AI Tools",
+    categoryKey: "ai",
+    status: "live",
+    statusLabel: "Live on Chrome Web Store",
+    featured: true,
+    rating: "Live Product",
+    description:
+      "Instant 0–100 B2B prospect scoring, tech stack discovery, hiring signals, and company firmographics directly inside the browser with automated daily prospecting quotas.",
+    image: image(
+      "/All Extension and Websites images with there name/LeadIntel-AI.webp",
+      "LeadIntel AI Chrome extension B2B sales prospect scoring and website tech stack discovery"
+    ),
+    technologies: ["Chrome MV3", "B2B Tech Stack Detection", "AI Lead Scoring", "Firmographics API", "Chrome Side Panel"],
+    architectureHighlights: "Automated website tech stack detection, dynamic 0-100 fit algorithms, persistent daily quota state.",
+    storeUrl:
+      "https://chromewebstore.google.com/detail/leadintel-ai-b2b-sales-le/ofbbhlbgfdpgbaifeehdihmdjimmehmp?authuser=0&hl=en",
+  },
   {
     slug: "applyflow-ai",
     title: "ApplyFlow AI",
@@ -629,21 +675,21 @@ export const experienceData = [
     location: "Lahore, Pakistan",
     employmentType: "Full-time",
     summary:
-      "Architect and ship production Laravel web applications, design secure database schemas, optimize backend query bottlenecks, and build high-performance React frontends within a 4-person engineering team.",
+      "Build and maintain full-stack Laravel and React applications, design normalized MySQL databases, optimize slow queries with composite indexing, and develop production Chrome extensions.",
     responsibilities: [
-      "Architected and deployed 5+ production web platforms (Next.js, React, Laravel) with encrypted file storage and automated cleanup workflows.",
-      "Designed MySQL and MongoDB databases with normalized schemas and strategic composite indexing, optimizing multiple slow queries to reduce response times by ~40% on large datasets.",
-      "Applied MVC architecture and modular Next.js API routes with decoupled service layers to ensure maintainability, rapid debugging, and seamless feature expansion.",
-      "Engineered multi-tenant authentication and granular Role-Based Access Control (RBAC) across core client deliverables.",
-      "Shipped 8+ production Manifest V3 browser extensions with dedicated backend integrations.",
-      "Collaborated actively using Git and Bitbucket branching workflows to deliver complex milestones ahead of schedule.",
+      "Built and deployed 5+ production web applications using Next.js, React, and Laravel with secure file handling and background cleanup jobs.",
+      "Designed MySQL and MongoDB databases with clean schemas and composite indexes, cutting slow query response times by ~40% on large datasets.",
+      "Structured backends using Laravel's service layer pattern and modular Next.js API routes for easy maintenance and debugging.",
+      "Implemented role-based access control (RBAC) and token-based authentication across client applications.",
+      "Built and published 10+ live Manifest V3 Chrome extensions with background service workers and side-panel UIs.",
+      "Worked closely with team members using Git and Bitbucket pull request workflows to hit product milestones.",
     ],
     technologies: ["Next.js", "React", "Laravel", "PHP", "Node.js", "MongoDB", "MySQL", "REST APIs", "RBAC", "Chrome MV3", "Git"],
     impactMetrics: [
-      "5+ Production Web & SaaS platforms architected, built, and shipped",
+      "5+ Production Web & SaaS platforms built and deployed",
       "75+ Custom PDF & web utility tools engineered within 108 tool suite",
       "~40% Query response time optimization on large datasets",
-      "8+ Live browser extensions built and published",
+      "10+ Live browser extensions published on Chrome Web Store",
     ],
   },
 ];
@@ -704,10 +750,10 @@ export const technicalStack = {
     },
   ],
   developerTools: [
-    { name: "Cursor / Copilot", role: "AI Assisted Engineering" },
-    { name: "Postman", role: "API Testing & Documentation" },
-    { name: "Git / Bitbucket", role: "Team Version Control" },
-    { name: "Vite & Webpack", role: "Frontend Tooling" },
+    { name: "Cursor & Antigravity AI", role: "AI-Native High-Velocity Delivery" },
+    { name: "Postman & REST Specs", role: "API Testing & Validation" },
+    { name: "Git / GitHub / Bitbucket", role: "Team Version Control & CI" },
+    { name: "Turbopack & Vite", role: "Modern High-Speed Build Tooling" },
   ],
 };
 
@@ -774,32 +820,32 @@ export const howIWork = [
 
 export const clientServices = [
   {
-    title: "Next.js & React Frontend Engineering",
-    description: "Building responsive, modern, ultra-fast web frontends with clean state management, modern animations, and accessible UI/UX.",
+    title: "Next.js 16 & React Web Engineering",
+    description: "Building responsive, modern, ultra-fast web frontends with React Server Components, sub-second TTFB, and zero layout shift.",
     icon: "Layout",
   },
   {
-    title: "Laravel & SaaS Engineering",
-    description: "Architecting scalable web applications, multi-tenant databases, authentication, dashboards, and custom backend business logic.",
+    title: "Technical SEO & Core Web Vitals Remediation",
+    description: "Resolving crawl blockers, redirect chains, schema architecture, and speed latency in partnership with dedicated search strategists.",
     icon: "Layers",
   },
   {
-    title: "MERN Stack & Node.js Development",
-    description: "Developing end-to-end full-stack applications with MongoDB, Express.js, React, and Node.js REST APIs.",
+    title: "Full-Stack SaaS & Laravel API Architecture",
+    description: "Architecting scalable web applications, multi-tenant databases, Sanctum auth, background queues, and self-serve billing.",
     icon: "Server",
   },
   {
-    title: "Chrome Extension Development (MV3)",
-    description: "Developing production Manifest V3 browser tools for workflow automation, AI assistance, DOM scraping, and document utilities.",
-    icon: "Cpu",
-  },
-  {
-    title: "PDF & Document Processing Systems",
-    description: "Building automated document conversion, merging, splitting, watermarking, and secure file handling workflows.",
+    title: "B2B Export & Corporate Portals",
+    description: "Custom web portals and Request-for-Quote (RFQ) catalogs tailored for international trade and procurement buyers worldwide.",
     icon: "FileText",
   },
   {
-    title: "Database Optimization & Tuning",
+    title: "Chrome Extension Development (MV3)",
+    description: "Developing production Manifest V3 browser tools (10+ live on Chrome Web Store) for workflow automation, AI assistance, and DOM utilities.",
+    icon: "Cpu",
+  },
+  {
+    title: "Database Optimization & Query Tuning",
     description: "Diagnosing slow MySQL/MongoDB queries, designing normalized schemas, and implementing indexing strategies for ~40% latency reduction.",
     icon: "Database",
   },

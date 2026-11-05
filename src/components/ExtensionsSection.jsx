@@ -56,7 +56,7 @@ export default function ExtensionsSection() {
                 Browser Products
               </p>
               <h2 className="text-wrap-balance max-w-3xl text-3xl font-semibold leading-[0.98] tracking-[-0.06em] text-white sm:text-5xl">
-                8+ Manifest V3 Extensions Shipped.
+                10+ Manifest V3 Extensions Shipped.
               </h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-white/60 lg:justify-self-end">
