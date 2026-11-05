@@ -67,7 +67,7 @@ export default function FreelanceServices() {
         </div>
 
         {/* Call to Action Box */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-6 border border-[var(--ink)] bg-[var(--paper)] p-8 sm:flex-row sm:p-10">
+        <div className="mt-14 flex flex-col items-start justify-between gap-6 border border-[var(--ink)] bg-[var(--paper)] p-8 lg:flex-row lg:items-center sm:p-10">
           <div>
             <h3 className="text-xl font-bold tracking-tight text-[var(--ink)] sm:text-2xl">
               Have a project or opportunity in mind?
@@ -76,19 +76,19 @@ export default function FreelanceServices() {
               Let&apos;s talk through your goals, timeline, and budget. I respond quickly and can jump on a call or chat on WhatsApp anytime.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 shrink-0">
             <a
               href={personalInfo.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[var(--ink)] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition-transform hover:-translate-y-0.5 hover:bg-black"
+              className="inline-flex items-center justify-center gap-2 bg-[var(--ink)] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition-transform hover:-translate-y-0.5 hover:bg-black"
             >
               <MessageSquare size={14} aria-hidden="true" />
               Chat on WhatsApp
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 border border-[var(--ink)] bg-transparent px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-[var(--ink)] transition-colors hover:bg-white"
+              className="inline-flex items-center justify-center gap-2 border border-[var(--ink)] bg-transparent px-4 py-3 text-xs font-bold uppercase tracking-wider text-[var(--ink)] transition-colors hover:bg-white"
             >
               Send an Email
               <ArrowUpRight size={14} aria-hidden="true" />
@@ -96,9 +96,11 @@ export default function FreelanceServices() {
             <a
               href={personalInfo.resumePdf}
               download
-              className="inline-flex items-center justify-center gap-2 border border-[var(--rule)] bg-[var(--surface)] px-4 py-3.5 text-xs font-bold uppercase tracking-wider text-[var(--muted)] transition-colors hover:text-[var(--ink)]"
+              className="inline-flex items-center justify-center gap-1.5 border border-[var(--ink)]/30 bg-[var(--surface)] px-3.5 py-3 text-xs font-bold uppercase tracking-wider text-[var(--ink)] transition-colors hover:border-[var(--ink)] hover:bg-white"
+              title="Download Resume (PDF)"
             >
-              <Download size={14} aria-hidden="true" />
+              <Download size={13} aria-hidden="true" />
+              Resume
             </a>
           </div>
         </div>
